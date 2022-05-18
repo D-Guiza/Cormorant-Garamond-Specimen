@@ -1,0 +1,480 @@
+*{
+	margin:0;
+}
+html{
+	font-size: 16px;
+	font-family:'GaraReg';
+	background-color:#F0F0F0;
+	padding:0 200px 0 200px;
+}
+a, a:hover, a:active{
+	text-decoration: none;
+	color: black;
+}
+.volver{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 2em;
+}
+/*----------Definir variables colores----------*/
+:root{
+	--azul: #009391;
+	--rojo: #f9504a;
+}
+/*Tipografías*/
+
+/*Garamond BOLD*/
+@font-face{
+	font-family: 'Garabold';
+	src:url('font/CormorantGaramondBold.ttf');
+}
+@font-face{
+	font-family: 'Garaboldit';
+	src:url('font/CormorantGaramondBoldItalic.ttf');
+}
+/*Garamond REGULAR*/
+@font-face{
+	font-family: "GaraReg";
+	src:url("font/CormorantGaramondRegular.woff");
+}
+@font-face{
+	font-family: 'Garait';
+	src:url('font/CormorantGaramondItalic.ttf');
+}
+/*Garamond LIGHT*/
+@font-face{
+	font-family: 'Garalight';
+	src:url('font/CormorantGaramondLight.ttf');
+}
+@font-face{
+	font-family: 'Garalightit';
+	src:url('font/CormorantGaramondLightItalic.ttf');
+}
+/*Garamond MEDIUM*/
+@font-face{
+	font-family: 'Garamed';
+	src:url('font/CormorantGaramondMedium.ttf');
+}
+@font-face{
+	font-family: 'Garamedit';
+	src:url('font/CormorantGaramondMediumItalic.ttf');
+}
+/*Garamond SEMIBOLD*/
+@font-face{
+	font-family: 'Garasemi';
+	src:url('font/CormorantGaramondSemiBold.ttf');
+}
+@font-face{
+	font-family: 'Garasemiit';
+	src:url('font/CormorantGaramondSemiBoldItalic.ttf');
+}
+
+/*Set estilísticos*/
+/*El creador de la tipografía estipula que ha creado varios sets de estilos de opentype, pero
+a su vez los ha adaptado en formatos individuales para la gente que no tiene conocimientos
+sobre opentype los utilice*/
+@font-face{
+	/*Upright*/
+	font-family: 'Garaupright';
+	src:url('font/estilos/CormorantUprightRegular.woff');
+}
+@font-face{
+	/*Infant*/
+	font-family: 'Garainfant';
+	src:url('font/estilos/CormorantInfantRegular.woff');
+}
+@font-face{
+	/*SC*/
+	font-family: 'GaraSC';
+	src:url('font/estilos/CormorantSCRegular.woff');
+}
+@font-face{
+	/*Unicase*/
+	font-family: 'Garaunicase';
+	src:url('font/estilos/CormorantUnicaseRegular.woff');
+}
+/*Estilos*/
+
+/*Color*/
+.rojo{
+	color: var(--rojo);
+}
+
+/*Jerarquía*/
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Garabold';
+}
+div> h1,h2,h3,h4,h5,h6{
+	margin: 1em 0 1em 0;
+}
+
+/*----------Estilos h1-h6----------*/
+h1,
+.fw-h1 {
+	font-size: 2.23125rem;
+	line-height: 1.2;
+}
+h2,
+.fw-h2 {
+	font-size: 1.7rem;
+	line-height: 1.3;
+}
+h3,
+.fw-h3 {
+	font-size: 1.5rem;
+	line-height: 1.4;
+}
+h4,
+.fw-h4 {
+	font-size: 1.25rem;
+	line-height: 1.4;
+}
+h5,
+.fw-h5 {
+	font-size: 1rem;
+	line-height: 1.4;
+}
+h6,
+.fw-h6 {
+	font-size: 0.875rem;
+	line-height: 1.4;
+}
+
+/*Cajas contenedoras*/
+.encabezado{
+	width: 900px;
+	font-size: 6rem;
+	line-height:0.9em;
+	text-align: right;
+	padding:1em 0 1em 0;
+	color: white;
+}
+.cabecera{
+	display: flex;
+	flex-direction: column;
+	/*Alineación horizontal*/
+	align-items: flex-end;
+	/*Alineación vertical*/
+	justify-content: space-between;
+	padding: 2em;
+	background: var(--rojo) url('img/cormoran.png') no-repeat local;
+	background-position: top right;
+	background-size: cover;
+	background-blend-mode: saturation;
+}
+.contenedor{
+	max-width: 100VW;
+	min-height: 300px;
+	border-bottom: 1px solid #bebebe;
+}
+.centradofil{
+	display: flex;
+	flex-direction: row;
+	/*Alineación horizontal*/
+	align-items: center;
+	/*Alineación vertical*/
+	justify-content: center;
+}
+.centradocol{
+	display: flex;
+	flex-direction: column;
+	/*Alineación horizontal*/
+	align-items: center;
+	/*Alineación vertical*/
+	justify-content: center;
+}
+.doscol{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.trescol{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.listahorizontal{
+	display: flex;
+}
+.listahorizontal li{
+	list-style: none;
+	padding: 0.5em;
+}
+.listahorizontal li a{
+	color: white;
+}
+.listahorizontal li a:hover{
+	color: var(--azul);
+}
+.introduccion{
+	max-width: 600px;
+	margin: 1em;
+	padding: 1em;
+	font-size: 1.3em;
+	text-align: center;
+	font-family: 'Garabold';
+	color: var(--rojo);
+}
+
+/*Texto*/
+.derecha{
+	text-align: right;
+}
+.izquierda{
+	text-align: left;
+}
+.centro{
+	text-align: center;
+}
+.justificado{
+	text-align: justify;
+}
+.titulo{
+	font-size: 6rem;
+	padding: 0.7em 0 0 0;
+}
+.grande{
+	font-size: 4.2em;
+	padding:0.3em 2em 0.5em 2em;
+	color: var(--rojo);
+}
+.mediano{
+	font-size: 3em;
+	padding:0.3em 2em 0.5em 2em;
+	color: var(--rojo);
+}
+.pequeño{
+	font-size: 1.9em;
+	padding:0.3em 1em 0.5em 1em;
+	color: var(--rojo);
+}
+
+/*Pesos*/
+.bold{
+	font-family: 'Garabold';
+}
+.boldit{
+	font-family: 'Garaboldit';
+}
+.semibold{
+	font-family: 'Garasemi';
+}
+.semiboldit{
+	font-family: 'Garasemiit';
+}
+.medium{
+	font-family: 'Garamed';
+}
+.mediumit{
+	font-family: 'Garamedit';
+}
+.light{
+	font-family: 'Garalight';
+}
+.regular{
+	font-family: 'GaraReg';
+}
+.italic{
+	font-family: 'Garait';
+}
+.lightit{
+	font-family: 'Garalightit';
+}
+
+/*Opciones de opentype*/
+
+/*Ligaduras estandar*/
+.noeslig{
+	font-variant-ligatures: no-common-ligatures;
+	font-family: 'Garait';
+}
+.eslig{
+	font-variant-ligatures: common-ligatures;
+	font-family: 'Garait';
+}
+
+/*Ligaduras discrecionales*/
+.dislig{
+	font-family: 'Garait';
+	font-variant-ligatures: discretionary-ligatures;
+}
+.nodislig{
+	font-family: 'Garait';
+	font-variant-ligatures: no-discretionary-ligatures;
+}
+
+/*Ligaduras históricas*/
+.nohislig{
+	font-family: 'Garait';
+	font-variant-ligatures: historical-ligatures;-ligatures;
+}
+.hislig{
+	font-family: 'Garait';
+	font-variant-ligatures: no-historical-ligatures;
+}
+
+/*Alternativas Contextuales*/
+.noaltcont{
+	font-family: 'Garait';
+	font-variant-ligatures: no-contextual;
+}
+.altcont{
+	font-family: 'Garait';
+	font-variant-ligatures: contextual;
+}
+
+/*Set estilistico*/
+.estilo3{
+	font-family:'Garaupright';
+}
+.estilo4{
+	font-family: 'Garainfant';
+}
+.estilo5{
+	font-family: 'GaraSC';
+}
+.estilo6{
+	font-family: 'Garaunicase';
+}
+.ss01{
+	font-feature-settings: "ss01";
+}
+.ss03{
+	font-feature-settings: "ss03";
+}
+.ss04{
+	font-feature-settings: "ss04";
+}
+.ss05{
+	font-feature-settings: "ss05";
+	font-variant-caps: small-caps;
+}
+/*Versalitas*/
+.versalitas{
+	font-variant-caps: small-caps;
+}
+/*Cifras*/
+.elzeviriano{
+	font-feature-settings: "onum";
+}
+.numcajaalta{
+	font-feature-settings: "lnum";
+}
+.alipro{
+	font-variant-numeric: proportional-nums;
+}
+.alitab{
+	font-variant-numeric: tabular-nums;
+}
+.fracciones{
+	font-variant-numeric: diagonal-fractions;
+	/*Para fracciones verticales stacked-fractions*/
+}
+/*Ordinales*/
+.ordinales{
+	font-variant-numeric: ordinal;
+}
+/*Superindice*/
+.superindice{
+	font-variant-position: super;
+}
+/*Subindice*/
+.subindice{
+	font-variant-position: sub;
+}
+
+/*Párrafo*/
+.sangriafr{
+	margin-left: 2em;
+	text-indent: -2em;
+}
+.indent{
+    text-indent: -0.35em;
+}
+.cita{
+	max-width: 550px;
+}
+.parrafo{
+	max-width: 600px;
+	margin-bottom: 1.5em;
+}
+.p1:first-letter{
+	font-size: 80px;
+	line-height: 60px;
+	padding: 2px;
+	margin-right: 5px;
+	float: left;
+}
+.t1{
+	text-indent: 2em;
+}
+/*Background*/
+main div:nth-child(odd){
+	background-color: white;
+}
+main div:nth-child(even){
+	background-color: white;
+}
+
+
+@media(max-width:1230px){
+	html{
+		padding: 0;
+	}
+	h1,
+	.fw-h1 {
+		font-size: 1.7rem;
+		line-height: 1.2;
+	}
+	h2,
+	.fw-h2 {
+		font-size: 1.5rem;
+		line-height: 1.3;
+	}
+	h3,
+	.fw-h3 {
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+	h4,
+	.fw-h4 {
+		font-size: 1rem;
+		line-height: 1.4;
+	}
+	h5,
+	.fw-h5 {
+		font-size: 0.875rem;
+		line-height: 1.4;
+	}
+	h6,
+	.fw-h6 {
+		font-size: 0.625rem;
+		line-height: 1.4;
+	}
+	.encabezado{
+		width:450px;
+		font-size:3.5em;
+	}
+	.introduccion{
+		max-width:450px;
+		font-size:1.1em;
+	}
+	.titulo{
+		font-size: 5rem;
+		padding: 0.7em 0 0 0;
+	}
+	.grande{
+		font-size: 3.2em;
+		padding:0.3em 0.2em 0.5em 0.2em;
+	}
+	.mediano{
+		font-size: 2em;
+		padding:0.3em 0.2em 0.5em 0.2em;
+	}
+	.pequeño{
+		font-size: 0.9em;
+		padding:0.3em 0.2em 0.5em 0.2em;
+	}
+	.cita{
+		max-width:300px;
+	}
+}
